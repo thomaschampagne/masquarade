@@ -1,0 +1,14 @@
+version: "3"
+services:
+  masquarade:
+    image: thomaschampagne/masquarade:latest
+    container_name: masquarade
+    restart: unless-stopped
+    environment:
+      - TZ=${TIMEZONE}
+      - BLOCKLISTS_UPDATE_SCHEDULE=30 3 * * 0
+    volumes:
+      - $PWD/masquarade/:/etc/dnsmasq.d/
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
