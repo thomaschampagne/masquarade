@@ -1,4 +1,4 @@
-<div align="center"><img src="https://raw.githubusercontent.com/thomaschampagne/masquarade/master/masquarade.svg" width="250px" style="border: 0px" alt=""/></div>
+<div align="center"><img src="./masquarade.svg" width="250px" style="border: 0px" alt=""/></div>
 
 ![Docker Pulls](https://img.shields.io/docker/pulls/thomaschampagne/masquarade.svg) 
 ![Image Size](https://images.microbadger.com/badges/image/thomaschampagne/masquarade.svg)
