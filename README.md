@@ -76,7 +76,67 @@ docker build --no-cache -t masquarade:yourtag .
 ```
 
 # Configuration
-## DNS
-## DHCP
-## Custom config file
 
+On startup, Masquarade will create `dns.conf` & `dhcp.conf` files into volume `/etc/dnsmasq.d/` (only if they don't exists). These two files are `dnsmasq` related config files. 
+
+Edit them according your needs. [The dnsmasq manual might help you](http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html).
+
+**To apply changes**, simply restart the container:
+
+```
+docker restart masquarade
+```
+or
+
+```
+docker-compose restart masquarade
+```
+## dns.conf default config
+
+```
+# Common
+domain-needed                       # Do NOT forward queries with no domain part
+bogus-priv                          # Fake reverse lookups for RFC1918 private address ranges
+filterwin2k                         # Don't forward spurious DNS requests from Windows hosts.
+expand-hosts                        # Expand simple names in /etc/hosts with domain-suffix.
+no-negcache                         # Do NOT cache failed search results
+no-resolv                           # Do NOT read /etc/resolv.conf. @see servers
+no-hosts                            # Do NOT load /etc/hosts file
+strict-order                        # Use nameservers strictly in the order given in /etc/resolv.conf
+localise-queries                    # Answer DNS queries based on the interface a query was sent to.
+
+# Domain, replace with your domain
+local=/lan/
+domain=lan
+
+# Optionnal: allow resolution of *.yoursubdomain.lan to the same ip_addr
+#address=/yoursubdomain.lan/[ip_addr]    
+
+# Default forwarders
+server=1.1.1.1                      # Cloudflare primary, replace with yours
+server=1.0.0.1                      # Cloudflare secondary, replace with yours
+```
+
+## dhcp.conf default config
+
+```
+dhcp-authoritative  # Assume we are the only DHCP server on the local network
+
+# Scope DHCP
+dhcp-range=192.168.0.0,192.168.0.20,24h # Lease time = 24h
+
+# DHCP Options given to each client.
+dhcp-option=3,192.168.0.1 # Default Gateway
+dhcp-option=1,255.255.255.0 # Netmask
+dhcp-option=6,192.168.0.1 # DNS Server (should be your docker host ip)
+
+# Static DHCP config. 
+# E.g. dhcp-host=[mac_addr],[hostname],[ip_addr]
+dhcp-host=aa:bb:cc:dd:ee:ff,myhostname,192.168.0.100
+```
+
+# Custom configuration
+
+Simply add your `.conf` config file into your mapped volume linked to `/etc/dnsmasq.d/`. This file must be `dnsmasq` compliant. [The dnsmasq manual might help you](http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html).
+
+When done restart your container to apply changes
