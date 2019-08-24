@@ -16,6 +16,13 @@ Masquarade is the "elementary version" of **Pi-Hole**. It's a sufficient alterna
 
 # Installation
 
+Tag to use along host architecture:
+
+| Architecture | Tag to use |
+|---|---|
+| x86-64 | latest |
+| arm | latest-armhf |
+
 ## Via docker run
 
 In a terminal with docker, paste below:
