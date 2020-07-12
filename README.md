@@ -1,6 +1,7 @@
 <div align="center"><img src="./masquarade.svg" width="250px" style="border: 0px" alt=""/></div>
 
-![Docker Pulls](https://img.shields.io/docker/pulls/thomaschampagne/masquarade.svg?style=flat-square) 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/thomaschampagne/masquarade/main?style=flat-square)
+![Docker Pulls](https://img.shields.io/docker/pulls/thomaschampagne/masquarade.svg?style=flat-square)
 
 # Masquarade
 Masquarade is a docker **DHCP & DNS** image able to **block tracking, advertising, analytics & malware servers** for all devices on your LAN when running in a container. 
