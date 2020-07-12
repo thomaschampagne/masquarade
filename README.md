@@ -1,7 +1,6 @@
 <div align="center"><img src="./masquarade.svg" width="250px" style="border: 0px" alt=""/></div>
 
-![Docker Pulls](https://img.shields.io/docker/pulls/thomaschampagne/masquarade.svg) 
-![Image Size](https://images.microbadger.com/badges/image/thomaschampagne/masquarade.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/thomaschampagne/masquarade.svg?style=flat-square) 
 
 # Masquarade
 Masquarade is a docker **DHCP & DNS** image able to **block tracking, advertising, analytics & malware servers** for all devices on your LAN when running in a container. 
@@ -15,13 +14,6 @@ Masquarade use [notracking/hosts-blocklists](https://github.com/notracking/hosts
 Masquarade is the "elementary version" of **Pi-Hole**. It's a sufficient alternative.
 
 # Installation
-
-Tag to use along host architecture:
-
-| Architecture | Tag to use |
-|---|---|
-| x86-64 | latest |
-| arm | latest-armhf |
 
 ## Via docker run
 
