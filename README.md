@@ -137,6 +137,6 @@ dhcp-host=aa:bb:cc:dd:ee:ff,myhostname,192.168.0.100
 
 # Custom configuration
 
-Simply add your `.conf` config file into your mapped volume linked to `/etc/dnsmasq.d/`. This file must be `dnsmasq` compliant. [The dnsmasq manual might help you](http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html).
+Simply add your `.conf` file into your mapped volume linked to `/etc/dnsmasq.d/`. This file must be `dnsmasq` compliant. [The dnsmasq manual might help you](http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html).
 
-When done restart your container to apply changes
+When done restart your container to apply changes.
