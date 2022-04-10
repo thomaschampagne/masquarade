@@ -12,8 +12,6 @@ Masquarade is based on latest [Alpine Linux](https://hub.docker.com/_/alpine) an
 
 Masquarade use [notracking/hosts-blocklists](https://github.com/notracking/hosts-blocklists) as blocklists source. Blocklists are updated everyday at 2AM (customisable with BLOCKLISTS_UPDATE_SCHEDULE env variable).
 
-Masquarade is the "elementary version" of **Pi-Hole**. It's a sufficient alternative.
-
 # Installation
 
 ## Via docker run
