@@ -5,6 +5,7 @@ ENV CONF_DIR /etc/dnsmasq.d/
 ENV SAMPLE_CONF_DIR /etc/dnsmasq.d.samples/
 ENV BLOCKLIST_DIR /blocklists/
 RUN apk update \
+    && apk upgrade \
     && apk --no-cache add dnsmasq tzdata
 EXPOSE 53/udp 53/tcp
 RUN mkdir -p ${BLOCKLIST_DIR}
