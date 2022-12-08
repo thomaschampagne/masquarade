@@ -10,7 +10,7 @@ Masquarade is also able to **block undesired webminers** servers which could **m
 
 Masquarade is based on latest [Alpine Linux](https://hub.docker.com/_/alpine) and [Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html). Final image size is **~5MB**.
 
-Masquarade use [notracking/hosts-blocklists](https://github.com/notracking/hosts-blocklists) as blocklists source. Blocklists are updated everyday at 2AM (customisable with BLOCKLISTS_UPDATE_SCHEDULE env variable).
+Masquarade use [notracking/hosts-blocklists](https://github.com/notracking/hosts-blocklists) as blocklists source. Blocklists are updated everyday at 2AM (customisable with BLOCKLISTS_UPDATE_SCHEDULE environment variable).
 
 # Installation
 
