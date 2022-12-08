@@ -1,3 +1,4 @@
+# Updated on 20221208
 FROM alpine:latest
 LABEL maintener="Thomas Champagne"
 ENV BLOCKLISTS_UPDATE_SCHEDULE 0 2 * * *
