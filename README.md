@@ -1,6 +1,6 @@
 <div align="center"><img src="./masquarade.svg" width="250px" style="border: 0px" alt=""/></div>
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/thomaschampagne/masquarade/main?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/thomaschampagne/masquarade/main.yml?style=flat-square)
 ![Docker Pulls](https://img.shields.io/docker/pulls/thomaschampagne/masquarade.svg?style=flat-square)
 
 # Masquarade
@@ -8,7 +8,7 @@
 
 Masquarade is also able to **block undesired webminers** servers which could **mine crypto money at your expense** on your devices.
 
-Masquarade is based on latest [Alpine Linux](https://hub.docker.com/_/alpine) and [Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html). Final image size is **~5MB**.
+Masquarade is based on latest [Alpine Linux](https://hub.docker.com/_/alpine) and [Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html). Final image size is **~6MB**.
 
 Masquarade use [notracking/hosts-blocklists](https://github.com/notracking/hosts-blocklists) as blocklists source. Blocklists are updated everyday at 2AM (customisable with BLOCKLISTS_UPDATE_SCHEDULE environment variable).
 
