@@ -1,4 +1,4 @@
-name: Build and Push the Masquarade Container Images
+name: oci-image-build
 on:
   push:
     branches:
