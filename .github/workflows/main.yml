@@ -2,10 +2,10 @@ name: oci-image-build
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch: {}
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 2 * * 1'
 
 jobs:
   image:
