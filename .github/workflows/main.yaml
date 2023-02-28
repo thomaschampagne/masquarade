@@ -11,6 +11,8 @@ jobs:
   image:
     runs-on: ubuntu-latest
     steps:
+      - name: Assign current YYYYMMDD date to "VERSION" env variable
+        run: echo "VERSION=$(date +%Y%m%d)" >> $GITHUB_ENV
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Setup QEMU
@@ -28,5 +30,9 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           context: .
+          build-args: |
+            VERSION=${{ env.VERSION }}
           push: true
-          tags: docker.io/thomaschampagne/masquarade:latest
+          tags: |
+            docker.io/thomaschampagne/masquarade:latest
+            docker.io/thomaschampagne/masquarade:${{ env.VERSION }}

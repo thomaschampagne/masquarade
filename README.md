@@ -1,6 +1,6 @@
 <div align="center"><img src="./masquarade.svg" width="250px" style="border: 0px" alt=""/></div>
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/thomaschampagne/masquarade/main.yml?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/thomaschampagne/masquarade/main.yaml?style=flat-square)
 ![Docker Pulls](https://img.shields.io/docker/pulls/thomaschampagne/masquarade.svg?style=flat-square)
 
 # Masquarade
@@ -70,7 +70,7 @@ docker-compose down
 Clone this repo, then run:
 
 ```bash
-docker build --no-cache -t masquarade:yourtag .
+docker build --no-cache --build-arg VERSION=$(date +%Y%m%d) -t masquarade:yourtag .
 ```
 
 # Configuration

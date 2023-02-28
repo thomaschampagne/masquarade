@@ -1,6 +1,10 @@
-# Updated on 20230203
+# Updated on 20230228
 FROM alpine:latest
+
+ARG VERSION
+
 LABEL maintener="Thomas Champagne"
+LABEL version=$VERSION
 
 ENV BLOCKLISTS_UPDATE_SCHEDULE 0 2 * * *
 ENV CONF_DIR /etc/dnsmasq.d/
