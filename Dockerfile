@@ -1,5 +1,5 @@
 # Updated on 20230228
-FROM alpine:latest
+FROM alpine:3.18.3
 
 ARG VERSION
 
